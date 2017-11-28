@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto');
+$font-stack: 'Quicksand', 'Roboto', sans-serif;
+$white: #fafafa;
+$black: #424242;
+$darkBlack: #1b1b1b;
+$lightBlack: #6d6d6d;
+$red: #b71c1c;
+$darkRed: #7f0000;
+
+/* Widths */
+$skinny: 600px;
+$wide: 1300px;
+
+/* Mixins */
+
+@mixin transform($x, $y, $rotate) {
+    -webkit-transform: translateX($x) translateY($y) rotate($rotate);
+    -ms-transform: translateX($x) translateY($y) rotate($rotate);
+    -moz-transform: translateX($x) translateY($y) rotate($rotate);
+    transform: translateX($x) translateY($y) rotate($rotate);
+}
+
+@mixin rotate($e) {
+    -webkit-transform: rotate($e);
+    -moz-transform: rotate($e);
+    -o-transform: rotate($e);
+    transform: rotate($e);
+}
+
+@mixin transition($e) {
+    -webkit-transition: $e;
+    -moz-transition: $e;
+    -o-transition: $e;
+    transition: $e;
+}
+
+@function get-contrasting-color($color) {
+    @if(lightness($color) > 50) {
+        @return $black;
+    }
+    @else {
+        @return $white;
+    }
+}

@@ -1,0 +1,39 @@
+.bg {
+    height: 100vh;
+    width: 100vw;
+    /* image import url is from main.css (after compile) */
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $black; /* fallback bg */
+    color: $white;
+    font-family: $font-stack;
+
+    .container-fluid {
+        padding-top: 10em;
+
+        .image-col {
+            width: 50vw;
+            height: 10em;
+
+            border: 1px solid $white;
+
+            #ecs-image {
+                height: inherit;
+            }
+        }
+
+        .text-col {
+            width: 50vw;
+            border: 1px solid $white;
+        }
+
+    }
+
+    .image-col {
+
+    }
+}
+
+
