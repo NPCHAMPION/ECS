@@ -8,7 +8,23 @@ class HomePage extends Component {
     render() {
         return (
             <div className="bg">
-               <Nav /> 
+               <Nav>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Team</a>
+                    </li>
+                    <li>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </Nav>
                <div className="container-fluid">
                     <div className="row">
                         <div className="col image-col">

@@ -1,10 +1,11 @@
 // for managing z-index values
 $zindex: (
-    nav-close-box: 200,
-    mobile-nav-after: 250,
     logo: 255,
     mobile-nav: 300,
+    mobile-li-after: 355,
+    mobile-li: 350,
     menu-button: 400,
+
     );
 
 .hide {
@@ -20,8 +21,12 @@ $zindex: (
     @include rotate(0deg);
     @include transition(.5s ease-in-out);
     cursor: pointer;
-    display: block; 
+    display: none; 
     z-index: map-get($map: $zindex, $key: menu-button);
+
+    @media screen and (max-width: $skinny) {
+        display: block;
+    }
 
     span {
         display: block;
@@ -71,42 +76,106 @@ $zindex: (
     }
 }
 
+#logo{
+    z-index: map-get($map: $zindex, $key: logo);
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    height: 3em;
+    @media screen and (max-width: $skinny) {
+        height: 2em;
+        top: 1em;
+        right: 1em;
+        left: auto;
+    }
+}
+
 #nav-bar {
-    position: fixed;
+    position: relative;
     top: 0px;
     right: 0px;
     width: 100vw;
-    padding: 0 0 0 1em;
-    background-color: rgba($black, .8);
-    .logo {
-        position: fixed;
-        top: 1em;
-        left: 1em;
-        @media screen and (max-width: $skinny) {
-            top: .5em;
-            right: 0;
-        }
-        img {
-            height: 3em;
-            @media screen and (max-width: $skinny) {
-                height: 2em;
-            }
-        }
+    background-color: rgba($darkBlack, 1);
+
+    @media screen and (max-width: $skinny) {
+        height: 4.5em;
     }
+
+}
+
+#big-nav {
+    @media screen and (max-width: $skinny) {
+        display: none;
+    }
+
     li {
-        padding: 1em .5em 1em .5em;
+        padding: 1.5em 1em 1.5em 1em;
         font-size: 1.4em;
         border-bottom: 2px solid rgba($white, 0);
         cursor: pointer; // @include transition(all .3s ease);
+        @include transition(all .3s ease);
+
         &:hover {
             border-bottom: 2px solid $red;
+            color: $red;
         }
         a {
             text-decoration: none;
-            color: $white;
+            color: inherit;
             &:hover {
-                color: $white;
+                color: inherit;
             }
+        }
+    }
+}
+
+#mobile-nav {
+    z-index: map-get($map: $zindex, $key: mobile-nav);
+    position: relative;
+    left: 0;
+    top: -100vh;
+    height: 100vh;
+    padding-top: 5.5em;
+    background-color: $darkBlack;
+    @include transition(all .4s ease);
+
+    @media screen and (min-width: $skinny) {
+        display: none;
+    }
+
+    @media screen and (max-width: $skinny) {
+        &.open {
+            top: 0;
+        }
+
+    }
+
+    li {
+        padding: 2.5em;
+        width: 90vw;
+        background-color: lighten($darkBlack, 5);
+        text-align: center;
+        margin: 0 5vw 0 5vw;
+        color: $white;
+        @include transition(all .3s ease);
+        // z-index: map-get($map: $zindex, $key: mobile-li);
+
+        &:hover {
+            color: $red;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        &:active {
+            color: $red;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+
+        a {
+            color: inherit;
+            font-size: 1.4em;
+            text-decoration: none;
         }
     }
 }

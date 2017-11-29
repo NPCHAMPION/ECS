@@ -27,23 +27,12 @@ class Nav extends Component {
                         <span></span>
                         <span></span>
                     </a>
-                <a className="logo" href="#"><img src={this.state.logo} alt="ECS" /></a>
-                <ul className={ this.state.skinny ? "nav justify-content-end hide" : "nav jusfity-content-end" }>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Home</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Services</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Team</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Products</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Contact</a>
-                    </li>
+                <a className="logo" href="#"><img id="logo" src={this.state.logo} alt="ECS" /></a>
+                <ul id="mobile-nav" className={ this.state.open ? "open" : null}>
+                    {this.props.children}
+                </ul>
+                <ul className="nav justify-content-end" id="big-nav">
+                    { this.props.children }
                 </ul>
                 {/* <i className="fa fa-bars"></i> */}
                 <div id="nav-bot-border"></div>
