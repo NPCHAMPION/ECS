@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto');
-$font-stack: 'Quicksand', 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto|Montserrat|Raleway');
+$font-stack: 'Raleway', 'Quicksand', 'Roboto', sans-serif;
+$logoColor: #ffeacd;
 $white: #fafafa;
 $black: #424242;
 $darkBlack: #1b1b1b;
@@ -8,8 +9,8 @@ $red: #b71c1c;
 $darkRed: #7f0000;
 
 /* Widths */
-$skinny: 600px;
-$wide: 1300px;
+$skinny: 750px;
+$med: 1500px;
 
 /* Mixins */
 

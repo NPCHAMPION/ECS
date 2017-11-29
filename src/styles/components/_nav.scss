@@ -24,7 +24,7 @@ $zindex: (
     display: none; 
     z-index: map-get($map: $zindex, $key: menu-button);
 
-    @media screen and (max-width: $skinny) {
+    @media screen and (max-width: $med) {
         display: block;
     }
 
@@ -33,7 +33,7 @@ $zindex: (
         position: absolute;
         height: 4px;
         width: 100%;
-        background: $white;
+        background: $logoColor;
         border-radius: 9px;
         opacity: 1;
         left: 0;
@@ -71,7 +71,7 @@ $zindex: (
             }
         }
     }
-    @media screen and (max-width: $skinny) {
+    @media screen and (max-width: $med) {
         display: block;
     }
 }
@@ -82,7 +82,7 @@ $zindex: (
     top: 1em;
     left: 1em;
     height: 3em;
-    @media screen and (max-width: $skinny) {
+    @media screen and (max-width: $med) {
         height: 2em;
         top: 1em;
         right: 1em;
@@ -96,15 +96,16 @@ $zindex: (
     right: 0px;
     width: 100vw;
     background-color: rgba($darkBlack, 1);
+    box-shadow: 0 6px 10px black;
 
-    @media screen and (max-width: $skinny) {
+    @media screen and (max-width: $med) {
         height: 4.5em;
     }
 
 }
 
 #big-nav {
-    @media screen and (max-width: $skinny) {
+    @media screen and (max-width: $med) {
         display: none;
     }
 
@@ -114,6 +115,7 @@ $zindex: (
         border-bottom: 2px solid rgba($white, 0);
         cursor: pointer; // @include transition(all .3s ease);
         @include transition(all .3s ease);
+        color: $logoColor;
 
         &:hover {
             border-bottom: 2px solid $red;
@@ -139,15 +141,14 @@ $zindex: (
     background-color: $darkBlack;
     @include transition(all .4s ease);
 
-    @media screen and (min-width: $skinny) {
+    @media screen and (min-width: $med) {
         display: none;
     }
 
-    @media screen and (max-width: $skinny) {
+    @media screen and (max-width: $med) {
         &.open {
             top: 0;
         }
-
     }
 
     li {

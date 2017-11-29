@@ -31,8 +31,9 @@ class HomePage extends Component {
                             <img id="ecs-image" src={this.state.image} alt="ECS" />
                         </div>
                         <div className="col text-col">
-                            <h1>Welcome to the site!</h1>
-                            <p>lorem ipsum and stuff. here you go.</p>
+                            <h1>A place of comfort & style where fashion meets first class.</h1>
+                            <br />
+                            <p>Our professional barbers and stylists are standing by, and the <span className="red-text">drinks are on us</span>! We have a friendly staff, convenient location, and free valet parking so come on in and treat yourself to the <span className="red-text">Executive Experience</span> today!</p>
                         </div>
                     </div>
                </div>

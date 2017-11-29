@@ -1,9 +1,10 @@
 .bg {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100vw;
     /* image import url is from main.css (after compile) */
     background-image: url('../images/bg.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center;
     background-size: cover;
     background-color: $black; /* fallback bg */
@@ -11,22 +12,90 @@
     font-family: $font-stack;
 
     .container-fluid {
-        padding-top: 10em;
+        margin-top: 3em;
+        background-color: $darkBlack;
+        border-radius: 10px;
+        box-shadow: 0 0 25px black;
+        $container-width: 75vw;
+        width: $container-width;
+        padding: 3em;
+        @media screen and (max-width: $skinny) {
+            width: 90vw;
+            padding: 2em $container-width*.1 2em $container-width*.1;
+            margin-top: 2em;
+            
+        }
+        @media screen and (max-width: $med) {
+            width: 90vw;
+        }
 
         .image-col {
-            width: 50vw;
-            height: 10em;
+            max-width: 30em;
+            padding: 2em 4em 2em 2em;
 
-            border: 1px solid $white;
+            @media screen and (max-width: $skinny) {
+                min-width: 15em;
+                border-bottom: 1px solid $red;
+                border-right: none;
+                padding: 0 2em 2em 2em;
+                margin: 0 auto;
+           }
+
+            @media screen and (max-width: $med) {
+                // min-width: 17em;
+                max-width: 17em;
+            }
+
+            border-right: 5px double $red;
 
             #ecs-image {
-                height: inherit;
+                width: inherit;
             }
         }
 
         .text-col {
             width: 50vw;
-            border: 1px solid $white;
+            padding: 6.5em 2em 2em 2em;
+            text-align: center;
+            color: $logoColor;
+
+            @media screen and (max-width: $skinny) {
+                padding: 0;
+           }
+
+            @media screen and (max-width: $med) {
+                padding: 2em 0 0 0;
+            }
+
+            h1 {
+                font-size: 1.7em;
+                font-weight: bold;
+                padding-bottom: 1em;
+                font-family: "Raleway";
+
+                @media screen and (max-width: $med) {
+                    font-size: 1.3em;
+                }
+            }
+
+            p {
+                font-size: 1.5em;
+                line-height: 1.5em;
+                padding: 0 4em 0 4em;
+
+                @media screen and (max-width: $med) {
+                    font-size: 1.2em;
+                    padding: 0 1em 0 1em;
+                }
+
+                @media screen and (max-width: $skinny) {
+                    font-size: 0.9em;
+                }
+            }
+
+            .red-text {
+                color: $red;
+            }
         }
 
     }
