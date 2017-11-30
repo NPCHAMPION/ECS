@@ -1,2 +1,37 @@
 .fun-link {
+    background-color: $darkBlack;
+    color: $white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 0%;
+        width: 0%;
+        border-radius: 50%;
+        background-color: $red;
+        z-index: -1;
+        @include transition(all .3s ease);
+        @include transform($x: -50%, $y: -50%, $rotate: 0);
+    }
+
+    &:hover {
+
+        &::after {
+            width: 150%;
+            height: 500%;
+        }
+    }
+
+    &:active{
+
+        &::after {
+            width: 150%;
+            height: 500%;
+        }
+    }
 }
