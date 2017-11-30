@@ -1,30 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Nav from './components/Nav';
-import HomePage from './pages/home';
+import Main from './layout/main';
+import Nav from './components/nav';
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Team</a>
-            </li>
-            <li>
-                <a href="#">Products</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </Nav>
-        <HomePage />
+        <BrowserRouter>
+          <Main>
+            <Nav />
+          </Main>
+        </BrowserRouter>
       </div>
     );
   }

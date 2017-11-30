@@ -8,6 +8,14 @@ $zindex: (
 
     );
 
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .hide {
     display: none;
 }
