@@ -91,7 +91,8 @@ $zindex: (
 }
 
 #nav-bar {
-    position: relative;
+    position: fixed;
+    font-family: 'Roboto';
     top: 0px;
     right: 0px;
     width: 100vw;
