@@ -4,17 +4,17 @@ const Service = (props) => {
     
     var info, title, price;
     if (props.title) {
-        title = <h1>{ props.title }</h1>
+        title = <h1 className="title">{ props.title }</h1>
     }
     if (props.info) {
-        info = <p>{ props.info }</p>
+        info = <p className="info">{ props.info }</p>
     }
     if (props.price) {
-        price = <p>{ props.price }</p>
+        price = <p className="price">{ props.price }</p>
     }
 
     return (
-        <div>
+        <div id="service-sqr">
             { title }
             { info }
             { price }

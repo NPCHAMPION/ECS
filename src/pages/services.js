@@ -24,14 +24,18 @@ class ServicesPage extends Component {
             <div>
                 <div className="bg">
                 </div>
-                <div className="services-box">
-                    <h1>Services</h1>
-                    { 
-                        this.state.services.map( (item, index) => (
-                            <Service title={item.title} info={item.info} price={item.price} />
-                            )
-                        ) 
-                    }
+                <div className="services-shell">
+                    <div className="header-box">
+                        <h1>Services</h1>
+                    </div>
+                    <div className="services-box">
+                        { 
+                            this.state.services.map( (item, index) => (
+                                <Service key={index} title={item.title} info={item.info} price={item.price} />
+                                )
+                            ) 
+                        }
+                    </div>
                 </div>
             </div>
 

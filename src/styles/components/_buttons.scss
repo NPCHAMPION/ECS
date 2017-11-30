@@ -1,9 +1,9 @@
 .fun-link {
     background-color: $darkBlack;
-    color: $white;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    cursor: pointer;
 
     &::after {
         content: "";

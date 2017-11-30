@@ -111,12 +111,23 @@
     }
 
     a {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        color: $logoColor !important;
         border-radius: 5px;
         box-shadow: 0 3px 10px black;
         margin-top: 1em;
-        padding: 2em;
+        padding: 1em;
         text-align: center;
-        width: 30em;
+        width: 20em;
+
+        @media screen and (max-width: $skinny) {
+            font-size: 1em;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
 
     }
 }
