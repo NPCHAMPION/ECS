@@ -107,24 +107,26 @@
 
     @media screen and (max-width: $med) {
         width: 100vw;
-        :nth-child(1) {
-            margin-right: 1em;
-            margin-left: 1em;
 
-            @media screen and (max-width: $skinny) {
-                margin-right: 0;
-                margin-left: 0;
-            }
+    }
+    
+    :nth-child(1) {
+        margin-right: 1em;
+        margin-left: 1em;
+
+        @media screen and (max-width: $skinny) {
+            margin-right: 0;
+            margin-left: 0;
         }
+    }
 
-        :nth-child(2) {
-            margin-left: 1em;
-            margin-right: 1em;
+    :nth-child(2) {
+        margin-left: 1em;
+        margin-right: 1em;
 
-            @media screen and (max-width: $skinny) {
-                margin-left: 0;
-                margin-right: 0;
-            }
+        @media screen and (max-width: $skinny) {
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 
