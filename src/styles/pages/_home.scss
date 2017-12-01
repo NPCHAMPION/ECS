@@ -15,6 +15,7 @@
     }
     @media screen and (max-width: $med) {
         width: 90vw;
+        margin: 6em auto;
     }
 
     .image-col {
@@ -89,8 +90,7 @@
 }
 
 .buttons-row {
-    margin-top: 1em;
-    margin-bottom: 5em;
+    margin: 1em auto 5em auto;
     width: 100%;
     padding: 0 1em 0 1em;
     // border: 1px solid $white;
@@ -99,14 +99,23 @@
     justify-content: center; // left to right
     align-items: center; // top to bottom
 
-    @media screen and (min-width: $med) {
+    @media screen and (max-width: $skinny) {
+        width: 100vw;
+    }
 
-        :nth-child(1) {
-            margin-right: 1em;
+    :nth-child(1) {
+        margin-right: 1em;
+
+        @media screen and (max-width: $skinny) {
+            margin-right: 0;
         }
+    }
 
-        :nth-child(2) {
-            margin-left: 1em;
+    :nth-child(2) {
+        margin-left: 1em;
+
+        @media screen and (max-width: $skinny) {
+            margin-left: 0;
         }
     }
 
@@ -120,6 +129,9 @@
         padding: 1em;
         text-align: center;
         width: 20em;
+
+        @media screen and (max-width: $med) {
+        }
 
         @media screen and (max-width: $skinny) {
             font-size: 1em;
