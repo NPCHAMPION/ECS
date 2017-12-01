@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class HomePage extends Component {
     state = {
@@ -20,8 +21,8 @@ class HomePage extends Component {
                         </div>
                 </div>
                 <div className="buttons-row">
-                    <a className="fun-link">Book an appointment</a>
-                    <a className="fun-link">Meet the team</a>
+                    <Link to={'/contact'} className="fun-link">Book an appointment</Link>
+                    <Link to={'/team'} className="fun-link">Meet the team</Link>
                 </div>
             </div>
         );
