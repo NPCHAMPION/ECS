@@ -10,6 +10,11 @@
     margin: 1em;
     padding: 1em;
 
+    @media screen and (max-width: $skinny) {
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
     @media screen and (max-width: $med) {
         min-height: 13em;
     }

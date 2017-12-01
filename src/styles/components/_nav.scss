@@ -88,7 +88,7 @@ a {
     z-index: map-get($map: $zindex, $key: logo);
     position: absolute;
     top: 1em;
-    left: 1em;
+    left: 3em;
     height: 3em;
     @media screen and (max-width: $med) {
         height: 2em;

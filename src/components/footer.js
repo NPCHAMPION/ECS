@@ -11,7 +11,7 @@ class Footer extends Component {
             <footer>
                 <div className="footer-box">
                     <p>Designed by </p>
-                    <a href="www.mctdev.org" target="_blank"><img src={ this.state.logo } /></a>
+                    <a href="http://www.mctdev.org" target="_blank"><img src={ this.state.logo } /></a>
                 </div>
             </footer>
         );
