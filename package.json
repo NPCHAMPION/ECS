@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
     "react": "^16.1.1",
@@ -11,13 +12,18 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "start": "npm-run-all -p watch-scss start-js",
-    "build": "npm-run-all -p build-scss build-js",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html",
     "start-js": "react-scripts start",
     "build-js": "react-scripts build",
     "build-scss": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-scss": "npm run build-scss && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.6.2"
   }
 }

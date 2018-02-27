@@ -19,11 +19,10 @@ class Nav extends Component {
         this.setState({open: !currentState});
     }
 
-    pauseAndOpen = () => {
+    pauseAndOpen () {
         setTimeout(() => {
             this.toggleOpen();            
         }, 400);
-
     }
 
     render() {

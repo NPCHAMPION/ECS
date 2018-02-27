@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 const mctLogo = require('../images/MCT-Logo.svg');
 
 class Footer extends Component {
-    state = { 
-        logo: mctLogo,
-     }
+    constructor(props) {
+        super(props)
+        this.state = { 
+            logo: mctLogo,
+        }
+    }
     render() {
         return (
             <footer>

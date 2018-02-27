@@ -9,15 +9,14 @@ class ServicesPage extends Component {
 
     constructor (props) {
         super(props);
-
         this.state = {
             services: [],
         }
     }
 
-    componentDidMount = () => (
+    componentDidMount() {
         this.setState({ services: serviceData })
-    )
+    }
 
     render() {
         return (

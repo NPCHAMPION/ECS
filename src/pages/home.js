@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class HomePage extends Component {
-    state = {
-        image: require('../images/ecs-logo2.png'),
+    constructor(props){
+        super(props)
+        this.state = {
+            image: require('../images/ecs-logo2.png'),
+        }
     }
     render() {
         return (
