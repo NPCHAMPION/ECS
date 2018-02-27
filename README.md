@@ -6,6 +6,6 @@ A website mockup I created for a local barbershop business. I created the themin
 
 ## Installation
 
-`git clone`
-`npm install` or `yarn install`
-`npm start` or `yarn start`
+- `git clone`
+- `npm install` or `yarn install`
+- `npm start` or `yarn start`
