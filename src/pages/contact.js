@@ -1,19 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ContactPage extends Component {
-    constructor (props) {
-        super (props);
+  constructor(props) {
+    super(props);
+  }
 
-    }
+  render() {
+    var styles = {
+      bg: {
+        paddingTop: "5em",
+        textAlign: "center",
+        margin: "0 auto",
+        fontSize: "4em"
+      }
+    };
 
-    render () {
-
-        return (
-            <div className="bg">
-            </div>
-
-        )
-    }
+    return (
+      <div style={styles.bg} className="bg">
+        <p>Under Construction</p>
+      </div>
+    );
+  }
 }
 
-export default ContactPage
+export default ContactPage;
