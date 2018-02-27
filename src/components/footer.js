@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-const mctLogo = require('../images/MCT-Logo.svg');
+const mctLogo = require("../images/MCT-Logo.svg");
 
 class Footer extends Component {
     constructor(props) {

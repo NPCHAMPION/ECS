@@ -6,9 +6,18 @@ class ProductsPage extends Component {
   }
 
   render() {
+    var styles = {
+      bg: {
+        paddingTop: "5em",
+        textAlign: "center",
+        margin: "0 auto",
+        fontSize: "4em"
+      }
+    };
+
     return (
-      <div className="bg">
-        <p>UNDER CONSTRUCTION</p>
+      <div style={styles.bg} className="bg">
+        <p>Under Construction</p>
       </div>
     );
   }
