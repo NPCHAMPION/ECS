@@ -23,7 +23,7 @@ a {
 #menu-button {
     width: 50px;
     height: 35px;
-    position: fixed;
+    position: absolute;
     top: 1.2em;
     left: 1em;
     @include rotate(0deg);
@@ -99,10 +99,10 @@ a {
 }
 
 #nav-bar {
-    position: fixed;
+    position: absolute;
     font-family: 'Roboto';
     top: 0px;
-    right: 0px;
+    left: 10px;
     width: 100vw;
     background-color: rgba($darkBlack, 1);
     box-shadow: 0 6px 10px black;
@@ -142,7 +142,7 @@ a {
 
 #mobile-nav {
     z-index: map-get($map: $zindex, $key: mobile-nav);
-    position: relative;
+    position: absolute;
     left: 0;
     top: -100vh;
     height: 100vh;

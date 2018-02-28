@@ -11,7 +11,7 @@ import ContactPage from '../pages/contact';
 const Main = (props) => (
     <div>
         { props.children }
-        <div className="main">
+        <div className="main bg">
         <Nav />
             <Switch>
                 <Route exact path='/ECS' component={ HomePage }/>
