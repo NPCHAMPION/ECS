@@ -37,54 +37,54 @@ class Nav extends Component {
                     </a>
                 <a className="logo" href="#"><img id="logo" src={this.state.logo} alt="ECS" /></a>
                 <ul id="mobile-nav" className={ this.state.open ? "open" : null}>
-                    <Link to={'/ecs'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS'} onClick={ this.pauseAndOpen }>
                         <li>
                             Home
                         </li>
                     </Link>
-                    <Link to={'/ecs/services'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS/services'} onClick={ this.pauseAndOpen }>
                         <li>
                             Services
                         </li>
                     </Link>
-                    <Link to={'/ecs/team'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS/team'} onClick={ this.pauseAndOpen }>
                         <li>
                             Team 
                         </li>
                     </Link>
-                    <Link to={'/ecs/products'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS/products'} onClick={ this.pauseAndOpen }>
                         <li>
                             Products 
                         </li>
                     </Link>
-                    <Link to={'/ecs/contact'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS/contact'} onClick={ this.pauseAndOpen }>
                         <li>
                             Contact
                         </li>
                     </Link>
                 </ul>
                 <ul className="nav justify-content-end" id="big-nav">
-                    <Link to={'/ecs'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS'} onClick={ this.pauseAndOpen }>
                         <li>
                             Home
                         </li>
                     </Link>
-                    <Link to={'/ecs/services'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS/services'} onClick={ this.pauseAndOpen }>
                         <li>
                             Services
                         </li>
                     </Link>
-                    <Link to={'/ecs/team'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS/team'} onClick={ this.pauseAndOpen }>
                         <li>
                             Team 
                         </li>
                     </Link>
-                    <Link to={'/ecs/products'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS/products'} onClick={ this.pauseAndOpen }>
                         <li>
                             Products 
                         </li>
                     </Link>
-                    <Link to={'/ecs/contact'} onClick={ this.pauseAndOpen }>
+                    <Link to={'/ECS/contact'} onClick={ this.pauseAndOpen }>
                         <li>
                             Contact
                         </li>
