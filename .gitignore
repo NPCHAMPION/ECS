@@ -5,7 +5,6 @@
 
 # production
 build/
-dist/
 .cache/
 src/**/*.css
 
