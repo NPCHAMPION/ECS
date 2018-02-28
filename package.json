@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gh-pages": "^1.1.0",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
     "react": "^16.1.1",
@@ -14,6 +13,7 @@
   "scripts": {
     "start": "parcel public/index.html",
     "build": "parcel build public/index.html",
+    "push-to-gh-pages": "git subtree push --prefix dist/ origin gh-pages",
     "start-js": "react-scripts start",
     "build-js": "react-scripts build",
     "build-scss": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
