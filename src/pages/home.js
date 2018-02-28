@@ -24,8 +24,8 @@ class HomePage extends Component {
                         </div>
                 </div>
                 <div className="buttons-row">
-                    <Link to={'/contact'} className="fun-link">Book an appointment</Link>
-                    <Link to={'/team'} className="fun-link">Meet the team</Link>
+                    <Link to={'/ecs/contact'} className="fun-link">Book an appointment</Link>
+                    <Link to={'/ecs/team'} className="fun-link">Meet the team</Link>
                 </div>
             </div>
         );
