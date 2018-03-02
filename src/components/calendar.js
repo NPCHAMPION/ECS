@@ -90,7 +90,7 @@ class Calendar extends Component {
         </EventBox>
         <EventBox hidden={this.state.hideNewEvent} onClick={this.toggleHidden}>
           {this.state.businessIsClosed ? (
-            <div>
+            <div style={{width: '100%'}}>
               <h2>Sorry! we are not open on the weekends.</h2>
               <h2>Please choose a different day.</h2>
             </div>
