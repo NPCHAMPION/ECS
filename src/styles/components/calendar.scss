@@ -1,46 +1,120 @@
+$screenBreak: 1100px;
+
 .bg {
   color: #fff;
 }
 .main {
   margin-top: 0;
 }
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(.5);
-}
-.blur-hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
 /* NewEvent */
 .blur-box {
   position: absolute;
   top: 4.5em;
   left: 0;
-  width: 105vw;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  padding: 10em 0 0 0;
+  background: rgba(75, 75, 75, 0.473);
+  // background: red;
+  transition: all 0.3s ease-in-out;
+}
+.event-box {
+  position: absolute;
+  top: 4.5em;
+  left: 0;
+  width: 100%;
   height: 100vh;
   z-index: 1;
   display: flex;
   justify-content: center;
+  padding: 10em 0 0 0;
   background: rgba(75, 75, 75, 0.473);
-  transition: all .3s ease-in-out;
+  // background: red;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: $screenBreak) {
+    padding: 5em 0 0 0;
+  }
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 .event {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   z-index: 2;
-  top: 10em;
-  left: 24.5vw;
-  width: 56vw;
+  width: 45vw;
   height: 25em;
   padding: 2em;
   background-color: #244e78;
-  transition: all .3s ease-in-out;
-  @media screen and (max-width: 1000px) {
-    width: 90vw;
-    top: 5em;
-    left: 6vw;
+  box-shadow: 0 0 15px 5px #333;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: $screenBreak) {
+    width: 80vw;
+  }
+  .flex-center {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  .x {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    color: rgba(184, 38, 38, 0.945);
+  }
+  p {
+    font-size: 1.4em;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 5px 0;
+    @media screen and (max-width: $screenBreak) {
+      font-size: 1em;
+    }
+  }
+
+  h1 {
+    width: 100%;
+    padding: 1em 0 0 0;
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 20px 0;
+    @media screen and (max-width: $screenBreak) {
+      font-size: 1.3em;
+    }
+  }
+  h2 {
+    width: 100%;
+    font-size: 1.5em;
+    padding: 20px 0;
+    text-align: center;
+  }
+  button {
+    width: 10em;
+    max-height: 3em;
+    padding: 15px 0;
+    margin: 0 auto 10px auto;
+    background-color: #3f3b3b;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 #333;
+    &:active {
+      box-shadow: none;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -49,17 +123,15 @@
   margin: 8em auto;
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: $screenBreak) {
     margin: 6em auto;
   }
 }
 .react-calendar {
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: $screenBreak) {
     width: 95vw;
-    margin: 0 0 0 -2.5vw;
   }
-  width: 50vw;
-  margin: 0 0 0 -2.5vw;
+  width: 75vw;
   border: none;
   background: #3f3b3b;
   &__navigation > button {
@@ -72,28 +144,31 @@
     }
   }
   &__tile {
-    padding: 3em .5em;
-    @media screen and (max-width: 1000px) {
-      padding: 2em .5em;
+    padding: 3em 0.5em;
+    @media screen and (max-width: $screenBreak) {
+      padding: 2em 0.5em;
     }
     &--active {
       background-color: #244e78;
     }
   }
 }
-button.react-calendar {
-  &__tile {
-    &:enabled {
-      &:hover {
-        background-color: #535353 !important;
+button {
+  color: rgb(226, 226, 226);
+  &.react-calendar {
+    &__tile {
+      &:enabled {
+        &:hover {
+          background-color: #535353 !important;
+        }
       }
-    }
-    &--active {
-      &:enabled:hover {
+      &--active {
+        &:enabled:hover {
           background-color: #535353;
-      }
-      &:enabled:focus {
-        background-color: #20466c;
+        }
+        &:enabled:focus {
+          background-color: #20466c;
+        }
       }
     }
   }
