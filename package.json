@@ -16,7 +16,7 @@
     "start": "parcel public/index.html",
     "clean": "rm -r dist",
     "build": "parcel build public/index.html",
-    "build-gh": "parcel build public/index.html --public-url https://mct-dev.github.io/",
+    "build-gh": "parcel build public/index.html --public-url https://mct-dev.github.io/ECS/",
     "push-to-gh-pages": "git subtree push --prefix dist/ origin gh-pages",
     "start-js": "react-scripts start",
     "build-js": "react-scripts build",
