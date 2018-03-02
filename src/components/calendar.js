@@ -22,7 +22,7 @@ class Calendar extends Component {
       today: new Date(),
       chosenDate: new Date(),
       hideNewEvent: true,
-      hideConfirm: false,
+      hideConfirm: true,
       businessIsClosed: false
     };
     this.checkDate = this.checkDate.bind(this);
